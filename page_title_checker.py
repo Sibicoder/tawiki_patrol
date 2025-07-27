@@ -42,18 +42,25 @@ possibly_misspelt_titles = [
 
 # ஜீ -> ஜு  (juice written as jees)
 # ju mistakenly written as juu (arjun -> arjuun)
-
+# கௌ  (kau) written as  கெள  (keLa )
 ######### to check from
 # ko written as ke + thunaikkaal (applies to nedil kO, also kou)
+# ha written as ura உ ற ->  ஹா 
 #  துணைக்கால் / ரகரம் குழப்பம் 
 # scha  kuzhappam
-# check all ன்த combo for ந்த 
+# னை written as னன 
+
+# check all ன்த combo for ந்த (similarly, nk, nch, nT, nth, mp)
 # ஞ் ஜ -> ஞ் ச , ன் ட ->  ண் டா 
 # க்க் -> க்க
 
 # Example usage
 article_titles = get_all_article_titles(limit=500, max_pages=370)
+found_titles = []
 for title in article_titles:
-    if "ஜூ " in title and "ஜூன்" not in title and "ஜூலை" not in title: 
-        print(title)
+        found_titles.append(title)
+
+for title in found_titles:
+    #if "" in title or "" in title and "" in title:
+         print(title)
 
